@@ -380,6 +380,25 @@
             font-weight: 500;
         }
 
+
+        .menu-item.unavailable {
+            opacity: 0.58;
+            cursor: not-allowed;
+            background: #F6F0E5;
+            border-color: rgba(201, 162, 39, 0.25);
+        }
+
+        .menu-item.unavailable:hover {
+            transform: none;
+            box-shadow: var(--shadow);
+            border-color: rgba(201, 162, 39, 0.25);
+        }
+
+        .item-price.struck {
+            text-decoration: line-through;
+            color: #9A8A70;
+        }
+
         /* Quantity control */
         .quantity-control {
             display: flex;
@@ -858,6 +877,7 @@
 <a class="cat-nav-btn" href="#garnitures">Garnitures</a>
 <a class="cat-nav-btn" href="#sucreries-bieres">Sucreries &amp; Bières</a>
 <a class="cat-nav-btn" href="#aperitifs">Apéritifs</a>
+<a class="cat-nav-btn" href="#tournee-liqueur">Tournée de Liqueur</a>
 <a class="cat-nav-btn" href="#eaux-minerales">Eaux Minérales</a>
 <a class="cat-nav-btn" href="#eaux-gazeuses">Eaux Gazeuses</a>
 <a class="cat-nav-btn" href="#vins">Vins</a>
@@ -2244,6 +2264,62 @@
 </div>
 </div>
 </section>
+<section class="category" id="tournee-liqueur">
+<div class="category-header">
+<div class="cat-icon"><svg viewbox="0 0 24 24"><path d="M8 22h8"></path><path d="M7 10h10"></path><path d="M12 10v12"></path><path d="M12 10a5 5 0 0 1 5-5 3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3 5 5 0 0 1 5 5Z"></path></svg></div>
+<h2 class="category-title">Tournée de Liqueur</h2>
+</div>
+<div class="items-grid">
+<div class="menu-item" onclick="toggleItem(this, 'Ricard (1 tournée)', 1000)">
+<div class="item-info">
+<div class="item-name">Ricard (1 tournée)</div>
+<div class="item-desc">Tournée de liqueur Ricard</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Campari (1 tournée)', 1000)">
+<div class="item-info">
+<div class="item-name">Campari (1 tournée)</div>
+<div class="item-desc">Tournée de liqueur Campari</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Red Label (1 tournée)', 1000)">
+<div class="item-info">
+<div class="item-name">Red Label (1 tournée)</div>
+<div class="item-desc">Tournée de liqueur Red Label</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Pastis 51 (1 tournée)', 1000)">
+<div class="item-info">
+<div class="item-name">Pastis 51 (1 tournée)</div>
+<div class="item-desc">Tournée de liqueur Pastis 51</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
+</div>
+</div>
+</section>
 <section class="category" id="eaux-minerales">
 <div class="category-header">
 <div class="cat-icon"><svg viewbox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-4-7-13-7-13S5 11 5 15a7 7 0 0 0 7 7Z"></path></svg></div>
@@ -2346,9 +2422,7 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">2,500 FCFA</span>
-</div>
+<div class="item-price-block"><span class="item-price">2 500 FCFA</span></div>
 </div>
 <div class="menu-item" onclick="toggleItem(this, 'RLG rouge', 2500)">
 <div class="item-info">
@@ -2360,13 +2434,11 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">2,500 FCFA</span>
+<div class="item-price-block"><span class="item-price">2 500 FCFA</span></div>
 </div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Don simon', 3000)">
+<div class="menu-item" onclick="toggleItem(this, 'Don Simon', 3000)">
 <div class="item-info">
-<div class="item-name">Don simon</div>
+<div class="item-name">Don Simon</div>
 <div class="item-desc">Vin espagnol Don Simon</div>
 <div class="quantity-control" onclick="event.stopPropagation()">
 <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
@@ -2374,23 +2446,7 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">3,000 FCFA</span>
-</div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Petit palace', 6000)">
-<div class="item-info">
-<div class="item-name">Petit palace</div>
-<div class="item-desc">Vin premium Petit Palace</div>
-<div class="quantity-control" onclick="event.stopPropagation()">
-<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
-<span class="qty-value">1</span>
-<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
-</div>
-</div>
-<div class="item-price-block">
-<span class="item-price">6,000 FCFA</span>
-</div>
+<div class="item-price-block"><span class="item-price">3 000 FCFA</span></div>
 </div>
 <div class="menu-item" onclick="toggleItem(this, 'Grand Versant', 4000)">
 <div class="item-info">
@@ -2402,9 +2458,7 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">4,000 FCFA</span>
-</div>
+<div class="item-price-block"><span class="item-price">4 000 FCFA</span></div>
 </div>
 <div class="menu-item" onclick="toggleItem(this, 'Huit-clos', 4000)">
 <div class="item-info">
@@ -2416,9 +2470,7 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">4,000 FCFA</span>
-</div>
+<div class="item-price-block"><span class="item-price">4 000 FCFA</span></div>
 </div>
 <div class="menu-item" onclick="toggleItem(this, 'Valpierre — option 1 000 FCFA', 1000)">
 <div class="item-info">
@@ -2430,10 +2482,9 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">1,000 FCFA</span>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
 </div>
-</div><div class="menu-item" onclick="toggleItem(this, 'Valpierre — option 2 000 FCFA', 2000)">
+<div class="menu-item" onclick="toggleItem(this, 'Valpierre — option 2 000 FCFA', 2000)">
 <div class="item-info">
 <div class="item-name">Valpierre — option 2 000 FCFA</div>
 <div class="item-desc">Vin Valpierre — Option à 2 000 FCFA</div>
@@ -2443,53 +2494,9 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">2,000 FCFA</span>
+<div class="item-price-block"><span class="item-price">2 000 FCFA</span></div>
 </div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Muscador', 6500)">
-<div class="item-info">
-<div class="item-name">Muscador</div>
-<div class="item-desc">Vin Muscador</div>
-<div class="quantity-control" onclick="event.stopPropagation()">
-<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
-<span class="qty-value">1</span>
-<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
-</div>
-</div>
-<div class="item-price-block">
-<span class="item-price">6,500 FCFA</span>
-</div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Mucho mas', 5000)">
-<div class="item-info">
-<div class="item-name">Mucho mas</div>
-<div class="item-desc">Vin Mucho mas</div>
-<div class="quantity-control" onclick="event.stopPropagation()">
-<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
-<span class="qty-value">1</span>
-<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
-</div>
-</div>
-<div class="item-price-block">
-<span class="item-price">5,000 FCFA</span>
-</div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Haussmann', 7500)">
-<div class="item-info">
-<div class="item-name">Haussmann</div>
-<div class="item-desc">Vin Haussmann</div>
-<div class="quantity-control" onclick="event.stopPropagation()">
-<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
-<span class="qty-value">1</span>
-<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
-</div>
-</div>
-<div class="item-price-block">
-<span class="item-price">7,500 FCFA</span>
-</div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'Artesano', 7500)">
+<div class="menu-item" onclick="toggleItem(this, 'Artesano', 5000)">
 <div class="item-info">
 <div class="item-name">Artesano</div>
 <div class="item-desc">Vin Artesano</div>
@@ -2499,25 +2506,239 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">7,500 FCFA</span>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
 </div>
-</div>
-<div class="menu-item" onclick="toggleItem(this, 'La réserve Probus', 4000)">
+<div class="menu-item" onclick="toggleItem(this, 'Baron d\'Arignac', 6500)">
 <div class="item-info">
-<div class="item-name">La réserve Probus</div>
-<div class="item-desc">Vin La réserve Probus</div>
+<div class="item-name">Baron d&#x27;Arignac</div>
+<div class="item-desc">Vin Baron d&#x27;Arignac</div>
 <div class="quantity-control" onclick="event.stopPropagation()">
 <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
 <span class="qty-value">1</span>
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">4,000 FCFA</span>
+<div class="item-price-block"><span class="item-price">6 500 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Veuve du Vernay', 6500)">
+<div class="item-info">
+<div class="item-name">Veuve du Vernay</div>
+<div class="item-desc">Vin Veuve du Vernay</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="menu-item" onclick="toggleItem(this, 'Duchesse Louise', 4000)">
+<div class="item-price-block"><span class="item-price">6 500 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Le Prieuré Lison', 5000)">
+<div class="item-info">
+<div class="item-name">Le Prieuré Lison</div>
+<div class="item-desc">Vin Le Prieuré Lison</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Mucho Más', 5000)">
+<div class="item-info">
+<div class="item-name">Mucho Más</div>
+<div class="item-desc">Vin Mucho Más</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Asconi', 5000)">
+<div class="item-info">
+<div class="item-name">Asconi</div>
+<div class="item-desc">Vin Asconi</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item unavailable" title="Article actuellement indisponible">
+<div class="item-info">
+<div class="item-name"><s>Veuve Clicquot brut</s></div>
+<div class="item-desc">Article rayé / non disponible</div>
+</div>
+<div class="item-price-block"><span class="item-price struck">Indisponible</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'La Réserve Probus', 5000)">
+<div class="item-info">
+<div class="item-name">La Réserve Probus</div>
+<div class="item-desc">Vin La Réserve Probus</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'The guv\'nor', 5000)">
+<div class="item-info">
+<div class="item-name">The guv&#x27;nor</div>
+<div class="item-desc">Vin The guv&#x27;nor</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Montignac', 5000)">
+<div class="item-info">
+<div class="item-name">Montignac</div>
+<div class="item-desc">Vin Montignac</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Muscador « Rosé »', 5000)">
+<div class="item-info">
+<div class="item-name">Muscador « Rosé »</div>
+<div class="item-desc">Vin Muscador Rosé</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">5 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Sand Stone', 4500)">
+<div class="item-info">
+<div class="item-name">Sand Stone</div>
+<div class="item-desc">Vin Sand Stone</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">4 500 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Côtes du Rhône', 7500)">
+<div class="item-info">
+<div class="item-name">Côtes du Rhône</div>
+<div class="item-desc">Vin Côtes du Rhône</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">7 500 FCFA</span></div>
+</div>
+<div class="menu-item unavailable" title="Article actuellement indisponible">
+<div class="item-info">
+<div class="item-name"><s>Haussmann</s></div>
+<div class="item-desc">Article rayé / non disponible</div>
+</div>
+<div class="item-price-block"><span class="item-price struck">Indisponible</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Petit Palace', 6000)">
+<div class="item-info">
+<div class="item-name">Petit Palace</div>
+<div class="item-desc">Vin Petit Palace</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">6 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Louis Eschenauer « Merlot »', 6000)">
+<div class="item-info">
+<div class="item-name">Louis Eschenauer « Merlot »</div>
+<div class="item-desc">Vin Louis Eschenauer Merlot</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">6 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Roche Mazet « Merlot »', 6000)">
+<div class="item-info">
+<div class="item-name">Roche Mazet « Merlot »</div>
+<div class="item-desc">Vin Roche Mazet Merlot</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">6 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Roche Mazet « Cabernet sauvignon »', 6000)">
+<div class="item-info">
+<div class="item-name">Roche Mazet « Cabernet sauvignon »</div>
+<div class="item-desc">Vin Roche Mazet Cabernet sauvignon</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">6 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Les Portes de Bordeaux', 15000)">
+<div class="item-info">
+<div class="item-name">Les Portes de Bordeaux</div>
+<div class="item-desc">Vin Les Portes de Bordeaux</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">15 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Louis Mercier', 15000)">
+<div class="item-info">
+<div class="item-name">Louis Mercier</div>
+<div class="item-desc">Vin Louis Mercier</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">15 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'La Petite Vendange', 3500)">
+<div class="item-info">
+<div class="item-name">La Petite Vendange</div>
+<div class="item-desc">Vin La Petite Vendange</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">3 500 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Duchesse Louise', 3500)">
 <div class="item-info">
 <div class="item-name">Duchesse Louise</div>
 <div class="item-desc">Vin Duchesse Louise</div>
@@ -2527,9 +2748,91 @@
 <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 </div>
 </div>
-<div class="item-price-block">
-<span class="item-price">4,000 FCFA</span>
+<div class="item-price-block"><span class="item-price">3 500 FCFA</span></div>
 </div>
+<div class="menu-item" onclick="toggleItem(this, 'RLG', 2500)">
+<div class="item-info">
+<div class="item-name">RLG</div>
+<div class="item-desc">Vin RLG</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">2 500 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Château Saint Bernard', 1000)">
+<div class="item-info">
+<div class="item-name">Château Saint Bernard</div>
+<div class="item-desc">Vin Château Saint Bernard</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">1 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Moët & Chandon', 40000)">
+<div class="item-info">
+<div class="item-name">Moët &amp; Chandon</div>
+<div class="item-desc">Champagne Moët &amp; Chandon</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">40 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Champagne Vincent', 40000)">
+<div class="item-info">
+<div class="item-name">Champagne Vincent</div>
+<div class="item-desc">Champagne Vincent</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">40 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Laurent Perrier', 40000)">
+<div class="item-info">
+<div class="item-name">Laurent Perrier</div>
+<div class="item-desc">Champagne Laurent Perrier</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">40 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Château Haute de Plaisance', 10000)">
+<div class="item-info">
+<div class="item-name">Château Haute de Plaisance</div>
+<div class="item-desc">Vin Château Haute de Plaisance</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">10 000 FCFA</span></div>
+</div>
+<div class="menu-item" onclick="toggleItem(this, 'Veuve Clicquot', 50000)">
+<div class="item-info">
+<div class="item-name">Veuve Clicquot</div>
+<div class="item-desc">Champagne Veuve Clicquot</div>
+<div class="quantity-control" onclick="event.stopPropagation()">
+<button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+<span class="qty-value">1</span>
+<button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+</div>
+</div>
+<div class="item-price-block"><span class="item-price">50 000 FCFA</span></div>
 </div>
 </div>
 </section>
@@ -3081,9 +3384,19 @@
 <span class="total-label">TOTAL</span>
 <span class="total-amount" id="totalAmount">0 FCFA</span>
 </div>
-<!-- SELECTION CHAMBRE / TABLE -->
+<!-- INFORMATIONS CLIENT -->
+<div class="client-section" style="margin-top: 1.2rem; padding: 1.2rem; background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E7 100%); border-radius: 14px; border: 2px solid var(--gold-light);">
+<label class="notes-label" style="color: var(--brown); font-size: 0.85rem;">Informations client</label>
+<div style="display: grid; gap: 0.8rem;">
+<input id="clientName" onblur="this.style.borderColor='#E8E0D0'" onfocus="this.style.borderColor='var(--gold)'" placeholder="Nom du client (ex: Kouamé Jean)" style="width: 100%; padding: 0.9rem; border: 2px solid #E8E0D0; border-radius: 12px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--brown); background: white; transition: border-color 0.3s;" type="text"/>
+<input id="clientPhone" inputmode="tel" onblur="this.style.borderColor='#E8E0D0'" onfocus="this.style.borderColor='var(--gold)'" placeholder="Numéro du client (ex: 07 00 00 00 00)" style="width: 100%; padding: 0.9rem; border: 2px solid #E8E0D0; border-radius: 12px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--brown); background: white; transition: border-color 0.3s;" type="tel"/>
+</div>
+<p style="color: #9A8A70; font-size: 0.75rem; margin-top: 0.55rem;">Utile pour les clients externes, les rappels et le suivi des commandes.</p>
+</div>
+
+<!-- SELECTION CHAMBRE / TABLE / CLIENT EXTERNE -->
 <div class="location-section" style="margin-top: 1.2rem; padding: 1.2rem; background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E7 100%); border-radius: 14px; border: 2px solid var(--gold-light);">
-<label class="notes-label" style="color: var(--brown); font-size: 0.85rem;">Lieu de service (obligatoire)</label>
+<label class="notes-label" style="color: var(--brown); font-size: 0.85rem;">Lieu de service</label>
 <div class="location-toggle" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
 <button class="loc-btn" id="btnChambre" onclick="selectLocation('chambre')" style="flex: 1; padding: 0.8rem; border: 2px solid #E8E0D0; border-radius: 12px; background: white; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--brown); cursor: pointer; transition: all 0.3s;" type="button">
 <svg fill="none" height="18" stroke="currentColor" stroke-width="2" style="display: block; margin: 0 auto 0.3rem;" viewbox="0 0 24 24" width="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -3093,12 +3406,16 @@
 <svg fill="none" height="18" stroke="currentColor" stroke-width="2" style="display: block; margin: 0 auto 0.3rem;" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="3" x2="21" y1="10" y2="10"></line></svg>
                         Table
                     </button>
+<button class="loc-btn" id="btnExterne" onclick="selectLocation('externe')" style="flex: 1; padding: 0.8rem; border: 2px solid #E8E0D0; border-radius: 12px; background: white; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--brown); cursor: pointer; transition: all 0.3s;" type="button">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" style="display: block; margin: 0 auto 0.3rem;" viewbox="0 0 24 24" width="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Externe
+                    </button>
 </div>
 <div id="numeroContainer" style="display: none;">
 <label class="notes-label" style="color: var(--brown); font-size: 0.8rem; margin-bottom: 0.4rem;">Numéro <span id="numeroLabel">de chambre</span></label>
 <input id="numeroInput" onblur="this.style.borderColor='#E8E0D0'" onfocus="this.style.borderColor='var(--gold)'" placeholder="Ex: 12, A3, Suite 5..." style="width: 100%; padding: 0.9rem; border: 2px solid #E8E0D0; border-radius: 12px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--brown); background: white; transition: border-color 0.3s;" type="text"/>
 </div>
-<p id="locationError" style="display: none; color: #E74C3C; font-size: 0.78rem; margin-top: 0.5rem; font-weight: 600;">Veuillez sélectionner Chambre ou Table et indiquer le numéro</p>
+<p id="locationError" style="display: none; color: #E74C3C; font-size: 0.78rem; margin-top: 0.5rem; font-weight: 600;">Sélectionnez Chambre, Table ou Client externe</p>
 </div>
 <div class="notes-section">
 <label class="notes-label">Notes / Préférences</label>
@@ -3215,6 +3532,10 @@
             document.querySelectorAll('.qty-value').forEach(el => {
                 el.textContent = '1';
             });
+            const clientName = document.getElementById('clientName');
+            const clientPhone = document.getElementById('clientPhone');
+            if (clientName) clientName.value = '';
+            if (clientPhone) clientPhone.value = '';
             updateCartCount();
             renderCart();
             showToast('Panier vidé');
@@ -3227,6 +3548,7 @@
             selectedLocation = type;
             const btnChambre = document.getElementById('btnChambre');
             const btnTable = document.getElementById('btnTable');
+            const btnExterne = document.getElementById('btnExterne');
             const numeroContainer = document.getElementById('numeroContainer');
             const numeroLabel = document.getElementById('numeroLabel');
             const numeroInput = document.getElementById('numeroInput');
@@ -3234,26 +3556,37 @@
 
             errorEl.style.display = 'none';
 
-            if (type === 'chambre') {
-                btnChambre.style.borderColor = 'var(--gold)';
-                btnChambre.style.background = 'linear-gradient(135deg, #FFFBF0 0%, #FFF8E7 100%)';
-                btnChambre.style.color = 'var(--brown-dark)';
-                btnTable.style.borderColor = '#E8E0D0';
-                btnTable.style.background = 'white';
-                btnTable.style.color = 'var(--brown)';
-                numeroLabel.textContent = 'de chambre';
-            } else {
-                btnTable.style.borderColor = 'var(--gold)';
-                btnTable.style.background = 'linear-gradient(135deg, #FFFBF0 0%, #FFF8E7 100%)';
-                btnTable.style.color = 'var(--brown-dark)';
-                btnChambre.style.borderColor = '#E8E0D0';
-                btnChambre.style.background = 'white';
-                btnChambre.style.color = 'var(--brown)';
-                numeroLabel.textContent = 'de table';
-            }
+            [btnChambre, btnTable, btnExterne].forEach(btn => {
+                if (!btn) return;
+                btn.style.borderColor = '#E8E0D0';
+                btn.style.background = 'white';
+                btn.style.color = 'var(--brown)';
+            });
 
-            numeroContainer.style.display = 'block';
-            numeroInput.focus();
+            const activeStyle = (btn) => {
+                btn.style.borderColor = 'var(--gold)';
+                btn.style.background = 'linear-gradient(135deg, #FFFBF0 0%, #FFF8E7 100%)';
+                btn.style.color = 'var(--brown-dark)';
+            };
+
+            if (type === 'chambre') {
+                activeStyle(btnChambre);
+                numeroLabel.textContent = 'de chambre';
+                numeroInput.placeholder = 'Ex: 12, A3, Suite 5...';
+                numeroContainer.style.display = 'block';
+                numeroInput.focus();
+            } else if (type === 'table') {
+                activeStyle(btnTable);
+                numeroLabel.textContent = 'de table';
+                numeroInput.placeholder = 'Ex: 4, terrasse 2...';
+                numeroContainer.style.display = 'block';
+                numeroInput.focus();
+            } else {
+                activeStyle(btnExterne);
+                numeroContainer.style.display = 'none';
+                numeroInput.value = '';
+                numeroValue = '';
+            }
         }
 
         function sendToWhatsApp() {
@@ -3262,20 +3595,19 @@
                 return;
             }
 
-            // Vérification obligatoire Chambre/Table
+            // Vérification du lieu de service
             const numeroInput = document.getElementById('numeroInput');
             numeroValue = numeroInput.value.trim();
             const errorEl = document.getElementById('locationError');
 
             if (!selectedLocation) {
-                errorEl.textContent = 'Veuillez sélectionner Chambre ou Table';
+                errorEl.textContent = 'Veuillez sélectionner Chambre, Table ou Client externe';
                 errorEl.style.display = 'block';
-                // Scroll vers la section
                 document.querySelector('.location-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
 
-            if (!numeroValue) {
+            if ((selectedLocation === 'chambre' || selectedLocation === 'table') && !numeroValue) {
                 errorEl.textContent = 'Veuillez indiquer le numéro de ' + (selectedLocation === 'chambre' ? 'chambre' : 'table');
                 errorEl.style.display = 'block';
                 numeroInput.focus();
@@ -3286,12 +3618,26 @@
 
             errorEl.style.display = 'none';
 
+            const clientName = document.getElementById('clientName').value.trim();
+            const clientPhone = document.getElementById('clientPhone').value.trim();
             const notes = document.getElementById('orderNotes').value.trim();
             let message = '*COMMANDE — RESTAURANT DELORIA*\n\n';
 
+            // Informations client
+            if (clientName || clientPhone) {
+                message += '*INFORMATIONS CLIENT*\n';
+                if (clientName) message += 'Nom: ' + clientName + '\n';
+                if (clientPhone) message += 'Téléphone: ' + clientPhone + '\n';
+                message += '------------------------\n\n';
+            }
+
             // Info localisation
             message += '*LIEU DE SERVICE*\n';
-            message += (selectedLocation === 'chambre' ? 'Chambre' : 'Table') + ' n° ' + numeroValue + '\n';
+            if (selectedLocation === 'externe') {
+                message += 'Client externe\n';
+            } else {
+                message += (selectedLocation === 'chambre' ? 'Chambre' : 'Table') + ' n° ' + numeroValue + '\n';
+            }
             message += '------------------------\n\n';
 
             // Articles
