@@ -5,7 +5,7 @@ import AdminPanel from "./components/AdminPanel";
 import Toast from "./components/Toast";
 import { Sparkles, AlertCircle, RefreshCw } from "lucide-react";
 import defaultMenuData from "../menu.json";
-import { db, doc, getDoc, setDoc } from "./lib/firebase";
+import { db, doc, getDoc, setDoc, onSnapshot } from "./lib/firebase";
 
 export default function App() {
   const [menuData, setMenuData] = useState<MenuData | null>(null);
@@ -35,45 +35,46 @@ export default function App() {
     };
   }, []);
 
-  // Fetch Menu from Firestore database
-  const fetchMenu = async () => {
+  // Synchroniser le menu en temps réel via Firestore
+  useEffect(() => {
     setIsLoading(true);
     setError(null);
-    try {
-      const docRef = doc(db, "menus", "default");
-      const docSnap = await getDoc(docRef);
 
-      if (docSnap.exists()) {
-        const data = docSnap.data() as MenuData;
-        setMenuData(data);
-        localStorage.setItem("deloria_menu_cache", JSON.stringify(data));
-      } else {
-        // First boot: setup standard initial catalog
-        await setDoc(docRef, defaultMenuData);
-        setMenuData(defaultMenuData as MenuData);
-        localStorage.setItem("deloria_menu_cache", JSON.stringify(defaultMenuData));
-      }
-    } catch (err: any) {
-      console.warn("Could not load from Firebase, reading from cache/file fallback:", err);
-      const cached = localStorage.getItem("deloria_menu_cache");
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached);
-          setMenuData(parsed);
-          handleShowToast("Catalogue chargé depuis la mémoire locale.", "info");
-        } catch {
+    const docRef = doc(db, "menus", "default");
+
+    const unsubscribe = onSnapshot(docRef, 
+      (docSnap) => {
+        if (docSnap.exists()) {
+          const data = docSnap.data() as MenuData;
+          setMenuData(data);
+          localStorage.setItem("deloria_menu_cache", JSON.stringify(data));
+        } else {
+          // Si le document n'existe pas encore, l'initialiser avec de la data saine
+          setDoc(docRef, defaultMenuData).catch(err => {
+            console.error("Impossible d'initialiser le document par défaut dans Firestore :", err);
+          });
+          setMenuData(defaultMenuData as MenuData);
+          localStorage.setItem("deloria_menu_cache", JSON.stringify(defaultMenuData));
+        }
+        setIsLoading(false);
+      },
+      (err) => {
+        console.warn("Erreur de synchronisation Firebase, utilisation du cache local :", err);
+        const cached = localStorage.getItem("deloria_menu_cache");
+        if (cached) {
+          try {
+            setMenuData(JSON.parse(cached));
+          } catch {
+            setMenuData(defaultMenuData as MenuData);
+          }
+        } else {
           setMenuData(defaultMenuData as MenuData);
         }
-      } else {
-        setMenuData(defaultMenuData as MenuData);
+        setIsLoading(false);
       }
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    );
 
-  useEffect(() => {
-    fetchMenu();
+    return () => unsubscribe();
   }, []);
 
   // Handle Save Menu on backend (Firestore document write)
@@ -134,7 +135,7 @@ export default function App() {
             {error || "Une erreur s'est produite lors du chargement des informations."}
           </p>
           <button
-            onClick={fetchMenu}
+            onClick={() => window.location.reload()}
             className="w-full py-3 rounded-xl bg-gold hover:bg-gold-light text-brown-dark font-sans font-extrabold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
           >
             <RefreshCw className="w-4 h-4 animate-spin-slow" />

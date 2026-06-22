@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Menu": {
+      "title": "Menu",
+      "description": "Menu for the restaurant including categories and food items.",
+      "type": "object",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "description": "List of categories"
+        }
+      },
+      "required": ["categories"]
+    }
+  },
+  "firestore": {
+    "menus/{menuId}": {
+      "schema": "Menu",
+      "description": "Dynamic restaurant food catalog documents"
+    }
+  }
+}
