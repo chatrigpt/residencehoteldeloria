@@ -5,6 +5,7 @@ import AdminPanel from "./components/AdminPanel";
 import Toast from "./components/Toast";
 import { Sparkles, AlertCircle, RefreshCw } from "lucide-react";
 import defaultMenuData from "../menu.json";
+import { db, doc, getDoc, setDoc } from "./lib/firebase";
 
 export default function App() {
   const [menuData, setMenuData] = useState<MenuData | null>(null);
@@ -12,6 +13,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [toast, setToast] = useState<{ message: string; type?: "success" | "error" | "info" } | null>(null);
+
 
   // Monitor location hashes safely to activate #admin
   useEffect(() => {
@@ -33,21 +35,26 @@ export default function App() {
     };
   }, []);
 
-  // Fetch Menu from fullstack Express server
+  // Fetch Menu from Firestore database
   const fetchMenu = async () => {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/menu");
-      if (!res.ok) {
-        throw new Error(`Encountered status ${res.status} while fetching catalogue.`);
+      const docRef = doc(db, "menus", "default");
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data() as MenuData;
+        setMenuData(data);
+        localStorage.setItem("deloria_menu_cache", JSON.stringify(data));
+      } else {
+        // First boot: setup standard initial catalog
+        await setDoc(docRef, defaultMenuData);
+        setMenuData(defaultMenuData as MenuData);
+        localStorage.setItem("deloria_menu_cache", JSON.stringify(defaultMenuData));
       }
-      const data = await res.json();
-      setMenuData(data);
-      // Keep stored in localStorage as temporary cache
-      localStorage.setItem("deloria_menu_cache", JSON.stringify(data));
     } catch (err: any) {
-      console.warn("Could not load from API, resolving using cache or fallback:", err);
+      console.warn("Could not load from Firebase, reading from cache/file fallback:", err);
       const cached = localStorage.getItem("deloria_menu_cache");
       if (cached) {
         try {
@@ -69,31 +76,20 @@ export default function App() {
     fetchMenu();
   }, []);
 
-  // Handle Save Menu on backend
+  // Handle Save Menu on backend (Firestore document write)
   const handleSaveMenu = async (newMenu: MenuData): Promise<boolean> => {
     try {
-      // Save locally first so the client gets instant feedback
+      // Keep state and local storage immediately in sync
       localStorage.setItem("deloria_menu_cache", JSON.stringify(newMenu));
       setMenuData(newMenu);
 
-      const res = await fetch("/api/menu", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newMenu)
-      });
-
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || "Save error");
-      }
-
+      const docRef = doc(db, "menus", "default");
+      await setDoc(docRef, newMenu);
+      handleShowToast("Modifications enregistrées et publiées pour tous !", "success");
       return true;
     } catch (err) {
-      console.warn("Could not save to remote server, saved locally:", err);
-      // Return true to prevent locking the screen and let the user continue using the app
-      handleShowToast("Modifications enregistrées localement sur votre appareil !", "info");
+      console.warn("Could not save to Firestore, saved only locally:", err);
+      handleShowToast("Enregistré localement (erreur de connexion réseau).", "info");
       return true;
     }
   };
