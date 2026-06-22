@@ -4,6 +4,7 @@ import MenuPublic from "./components/MenuPublic";
 import AdminPanel from "./components/AdminPanel";
 import Toast from "./components/Toast";
 import { Sparkles, AlertCircle, RefreshCw } from "lucide-react";
+import defaultMenuData from "../menu.json";
 
 export default function App() {
   const [menuData, setMenuData] = useState<MenuData | null>(null);
@@ -43,9 +44,22 @@ export default function App() {
       }
       const data = await res.json();
       setMenuData(data);
+      // Keep stored in localStorage as temporary cache
+      localStorage.setItem("deloria_menu_cache", JSON.stringify(data));
     } catch (err: any) {
-      console.error("Error loaded menu data:", err);
-      setError("Impossible de charger le catalogue. Veuillez vérifier que le serveur est bien démarré.");
+      console.warn("Could not load from API, resolving using cache or fallback:", err);
+      const cached = localStorage.getItem("deloria_menu_cache");
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          setMenuData(parsed);
+          handleShowToast("Catalogue chargé depuis la mémoire locale.", "info");
+        } catch {
+          setMenuData(defaultMenuData as MenuData);
+        }
+      } else {
+        setMenuData(defaultMenuData as MenuData);
+      }
     } finally {
       setIsLoading(false);
     }
@@ -58,6 +72,10 @@ export default function App() {
   // Handle Save Menu on backend
   const handleSaveMenu = async (newMenu: MenuData): Promise<boolean> => {
     try {
+      // Save locally first so the client gets instant feedback
+      localStorage.setItem("deloria_menu_cache", JSON.stringify(newMenu));
+      setMenuData(newMenu);
+
       const res = await fetch("/api/menu", {
         method: "POST",
         headers: {
@@ -71,11 +89,12 @@ export default function App() {
         throw new Error(errorData.error || "Save error");
       }
 
-      setMenuData(newMenu);
       return true;
     } catch (err) {
-      console.error("Error saving menu on server:", err);
-      return false;
+      console.warn("Could not save to remote server, saved locally:", err);
+      // Return true to prevent locking the screen and let the user continue using the app
+      handleShowToast("Modifications enregistrées localement sur votre appareil !", "info");
+      return true;
     }
   };
 
