@@ -209,15 +209,10 @@ export default function MenuPublic({ categories, onOpenAdmin }: MenuPublicProps)
           backgroundSize: '24px 24px'
         }} />
 
-        {/* Top Spacer or Small Admin Shortcut */}
+        {/* Main portal layout */}
         <div className="flex justify-end max-w-md w-full mx-auto relative z-10">
-          <button 
-            onClick={onOpenAdmin}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#b58c2c]/10 border border-[#b58c2c]/25 hover:bg-[#b58c2c]/20 text-[#a0771f] font-sans font-bold text-[10px] tracking-wider uppercase transition-colors cursor-pointer"
-          >
-            <Lock className="w-3 h-3" />
-            <span>Espace Resto</span>
-          </button>
+          {/* Spacer to keep balance */}
+          <div className="h-4" />
         </div>
 
         {/* Central Logo and Identity */}
@@ -350,9 +345,19 @@ export default function MenuPublic({ categories, onOpenAdmin }: MenuPublicProps)
         </div>
 
         {/* Cozy Footer */}
-        <div className="max-w-md w-full mx-auto text-center relative z-10 text-[10px] tracking-wide text-[#90734c]/70 font-semibold uppercase leading-relaxed">
-          <p>Résidence Hôtel Deloria</p>
-          <p className="text-[9px] text-[#90734c]/55 mt-1 font-normal lowercase">Arrah, quartier CGE — Côte d'Ivoire</p>
+        <div className="max-w-md w-full mx-auto text-center relative z-10 text-[10px] tracking-wide text-[#90734c]/70 font-semibold uppercase leading-relaxed flex flex-col items-center gap-3">
+          <div>
+            <p>Résidence Hôtel Deloria</p>
+            <p className="text-[9px] text-[#90734c]/55 mt-1 font-normal lowercase">Arrah, quartier CGE — Côte d'Ivoire</p>
+          </div>
+          
+          <button 
+            onClick={onOpenAdmin}
+            className="flex items-center gap-1.5 px-3 py-1 bg-[#b58c2c]/5 hover:bg-[#b58c2c]/10 text-[#90734c]/40 hover:text-[#90734c] font-sans font-medium text-[9px] tracking-widest uppercase transition-all duration-300 rounded-full border border-transparent hover:border-[#b58c2c]/10 cursor-pointer mt-1"
+          >
+            <Lock className="w-2.5 h-2.5 opacity-50" />
+            <span>Espace Resto</span>
+          </button>
         </div>
       </div>
     );
