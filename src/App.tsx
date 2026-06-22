@@ -80,12 +80,15 @@ export default function App() {
   // Handle Save Menu on backend (Firestore document write)
   const handleSaveMenu = async (newMenu: MenuData): Promise<boolean> => {
     try {
+      // Nettoyer les valeurs 'undefined' qui font échouer Firestore
+      const sanitizedMenu = JSON.parse(JSON.stringify(newMenu));
+
       // Keep state and local storage immediately in sync
-      localStorage.setItem("deloria_menu_cache", JSON.stringify(newMenu));
-      setMenuData(newMenu);
+      localStorage.setItem("deloria_menu_cache", JSON.stringify(sanitizedMenu));
+      setMenuData(sanitizedMenu);
 
       const docRef = doc(db, "menus", "default");
-      await setDoc(docRef, newMenu);
+      await setDoc(docRef, sanitizedMenu);
       handleShowToast("Modifications enregistrées et publiées pour tous !", "success");
       return true;
     } catch (err) {
