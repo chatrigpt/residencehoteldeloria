@@ -1,0 +1,1380 @@
+{
+  "categories": [
+    {
+      "id": "petit-dejeuner",
+      "nom": "Petit Déjeuner",
+      "icon": "Sun",
+      "plats": [
+        {
+          "id": "pd-1",
+          "nom": "Omelette nature",
+          "description": "Omelette classique, bien moelleuse",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "pd-2",
+          "nom": "Omelette légumes",
+          "description": "Omelette aux légumes de saison",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-3",
+          "nom": "Œuf au plat",
+          "description": "Œuf sur le plat, bien cuit",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-4",
+          "nom": "Thon haché, pain, café au lait",
+          "description": "Thon haché avec pain et café",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-5",
+          "nom": "Café au lait, pain, beurre",
+          "description": "Café crémeux avec pain et beurre",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-6",
+          "nom": "Thé au citron",
+          "description": "Thé noir infusé au citron frais",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "pd-7",
+          "nom": "Café Nespresso",
+          "description": "Café espresso premium",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "pd-8",
+          "nom": "Spaghetti au rognon",
+          "description": "Pâtes aux rognons de bœuf",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-9",
+          "nom": "Rognon simple",
+          "description": "Rognon grillé, assaisonné",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "pd-10",
+          "nom": "Spaghetti au foie",
+          "description": "Pâtes au foie de volaille",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-11",
+          "nom": "Spaghetti aux œufs",
+          "description": "Pâtes sautées aux œufs",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-12",
+          "nom": "Spaghetti au carré de bœuf",
+          "description": "Pâtes au bœuf tendre",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "pd-13",
+          "nom": "Petit pois aux œufs",
+          "description": "Petits pois mijotés aux œufs",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "pd-14",
+          "nom": "Flocons d'avoine au lait",
+          "description": "Avoine crémeuse au lait chaud",
+          "prix": 1500,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "entrees",
+      "nom": "Entrées",
+      "icon": "Apple",
+      "plats": [
+        {
+          "id": "ent-1",
+          "nom": "Avocat du poulailler",
+          "description": "Avocat frais du jour",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "ent-2",
+          "nom": "Salade composée",
+          "description": "Assortiment de légumes frais",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "ent-3",
+          "nom": "Salade verte",
+          "description": "Salade de feuilles vertes",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "ent-4",
+          "nom": "Festival de crudités",
+          "description": "Assortiment de crudités variées",
+          "prix": 2000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "specialites-africaines",
+      "nom": "Spécialités Africaines",
+      "icon": "Flame",
+      "plats": [
+        {
+          "id": "af-1a",
+          "nom": "Poulet pondeuse (kédjenou/soupe/grillé) — option 4 000 FCFA",
+          "description": "Poulet fermier, 3 façons — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "af-1b",
+          "nom": "Poulet pondeuse (kédjenou/soupe/grillé) — option 8 000 FCFA",
+          "description": "Poulet fermier, 3 façons — Option à 8 000 FCFA",
+          "prix": 8000,
+          "disponible": true
+        },
+        {
+          "id": "af-2a",
+          "nom": "Poulet de chair (braisé/grillé/sauté) — option 3 500 FCFA",
+          "description": "Poulet tendre, au choix — Option à 3 500 FCFA",
+          "prix": 3500,
+          "disponible": true
+        },
+        {
+          "id": "af-2b",
+          "nom": "Poulet de chair (braisé/grillé/sauté) — option 6 000 FCFA",
+          "description": "Poulet tendre, au choix — Option à 6 000 FCFA",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "af-3a",
+          "nom": "Soupe Alatchan au poisson — option 3 000 FCFA",
+          "description": "Soupe traditionnelle ivoirienne — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "af-3b",
+          "nom": "Soupe Alatchan au poisson — option 4 000 FCFA",
+          "description": "Soupe traditionnelle ivoirienne — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "af-4a",
+          "nom": "Poisson Carpe (soupe/grillé/braisé/sauté) — option 3 000 FCFA",
+          "description": "Carpe préparée à votre goût — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "af-4b",
+          "nom": "Poisson Carpe (soupe/grillé/braisé/sauté) — option 6 000 FCFA",
+          "description": "Carpe préparée à votre goût — Option à 6 000 FCFA",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "af-5a",
+          "nom": "Poisson Sosso (grillé) — option 3 000 FCFA",
+          "description": "Sosso grillé aux épices — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "af-5b",
+          "nom": "Poisson Sosso (grillé) — option 8 000 FCFA",
+          "description": "Sosso grillé aux épices — Option à 8 000 FCFA",
+          "prix": 8000,
+          "disponible": true
+        },
+        {
+          "id": "af-6a",
+          "nom": "APF (poisson fumé) — option 700 FCFA",
+          "description": "Poisson fumé traditionnel — Option à 700 FCFA",
+          "prix": 700,
+          "disponible": true
+        },
+        {
+          "id": "af-6b",
+          "nom": "APF (poisson fumé) — option 1 000 FCFA",
+          "description": "Poisson fumé traditionnel — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "af-7a",
+          "nom": "Garba Chaud (poisson Thon) — option 700 FCFA",
+          "description": "Garba au thon, sur commande — Option à 700 FCFA",
+          "prix": 700,
+          "disponible": true
+        },
+        {
+          "id": "af-7b",
+          "nom": "Garba Chaud (poisson Thon) — option 2 000 FCFA",
+          "description": "Garba au thon, sur commande — Option à 2 000 FCFA",
+          "prix": 2000,
+          "disponible": true
+        },
+        {
+          "id": "af-8a",
+          "nom": "Lapin (sauté/braisé/grillé) — option 6 000 FCFA",
+          "description": "Lapin fermier, 3 façons — Option à 6 000 FCFA",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "af-8b",
+          "nom": "Lapin (sauté/braisé/grillé) — option 12 000 FCFA",
+          "description": "Lapin fermier, 3 façons — Option à 12 000 FCFA",
+          "prix": 12000,
+          "disponible": true
+        },
+        {
+          "id": "af-9a",
+          "nom": "Tchêp Djêné (riz aux poissons ou viandes) — option 3 000 FCFA",
+          "description": "Riz au gras traditionnel — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "af-9b",
+          "nom": "Tchêp Djêné (riz aux poissons ou viandes) — option 5 000 FCFA",
+          "description": "Riz au gras traditionnel — Option à 5 000 FCFA",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "af-10",
+          "nom": "Pattes de bœuf + Attiéké",
+          "description": "Pattes de bœuf en sauce avec attiéké",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "af-11",
+          "nom": "Pattes de bœuf + Riz",
+          "description": "Pattes de bœuf en sauce avec riz",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "af-12",
+          "nom": "Tripes de bœuf + Attiéké",
+          "description": "Tripes en sauce avec attiéké",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "af-13",
+          "nom": "Tripes de bœuf + Riz",
+          "description": "Tripes en sauce avec riz",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "af-14a",
+          "nom": "Poisson carpe au four — option 3 000 FCFA",
+          "description": "Carpe rôtie au four — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "af-14b",
+          "nom": "Poisson carpe au four — option 5 000 FCFA",
+          "description": "Carpe rôtie au four — Option à 5 000 FCFA",
+          "prix": 5000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "specialites-europeennes",
+      "nom": "Spécialités Européennes",
+      "icon": "Utensils",
+      "plats": [
+        {
+          "id": "eur-1",
+          "nom": "Gratin de pomme de terre",
+          "description": "Gratin crémeux au fromage",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "eur-2",
+          "nom": "Carpe à la nage",
+          "description": "Carpe pochée au vin blanc",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "eur-3",
+          "nom": "Poulet pané KFC",
+          "description": "Poulet croustillant pané",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "eur-4",
+          "nom": "Goujonnette de poisson sauce tartare",
+          "description": "Frites de poisson sauce tartare",
+          "prix": 7000,
+          "disponible": true
+        },
+        {
+          "id": "eur-5a",
+          "nom": "Riz pilaf curry — option 4 000 FCFA",
+          "description": "Riz parfumé au curry — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "eur-5b",
+          "nom": "Riz pilaf curry — option 7 000 FCFA",
+          "description": "Riz parfumé au curry — Option à 7 000 FCFA",
+          "prix": 7000,
+          "disponible": true
+        },
+        {
+          "id": "eur-6a",
+          "nom": "Kefta avec frites — option 3 500 FCFA",
+          "description": "Boulettes de viande grillées — Option à 3 500 FCFA",
+          "prix": 3500,
+          "disponible": true
+        },
+        {
+          "id": "eur-6b",
+          "nom": "Kefta avec frites — option 4 000 FCFA",
+          "description": "Boulettes de viande grillées — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "eur-7a",
+          "nom": "Pomme de terre farcie à la viande — option 4 000 FCFA",
+          "description": "Pommes de terre au four farcies — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "eur-7b",
+          "nom": "Pomme de terre farcie à la viande — option 6 000 FCFA",
+          "description": "Pommes de terre au four farcies — Option à 6 000 FCFA",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "eur-8",
+          "nom": "Tagliatelle à la sauce Bolognaise",
+          "description": "Pâtes fraîches sauce bolognaise",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "eur-9a",
+          "nom": "Brochettes de Poulet — option 3 000 FCFA",
+          "description": "Brochettes de poulet mariné — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "eur-9b",
+          "nom": "Brochettes de Poulet — option 5 000 FCFA",
+          "description": "Brochettes de poulet mariné — Option à 5 000 FCFA",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "eur-10a",
+          "nom": "Pomme de terre sautée — option 3 000 FCFA",
+          "description": "Pommes de terre sautées aux herbes — Option à 3 000 FCFA",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "eur-10b",
+          "nom": "Pomme de terre sautée — option 4 000 FCFA",
+          "description": "Pommes de terre sautées aux herbes — Option à 4 000 FCFA",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "eur-11",
+          "nom": "Spaghetti à la bassamoise",
+          "description": "Spaghetti sauce bassamoise",
+          "prix": 3000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "nom": "Desserts",
+      "icon": "Dessert",
+      "plats": [
+        {
+          "id": "des-1",
+          "nom": "Crêpe nature",
+          "description": "Crêpe fine au sucre",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "des-2",
+          "nom": "Crêpe chocolat",
+          "description": "Crêpe au chocolat fondant",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "des-3a",
+          "nom": "Yaourt nature — option 500 FCFA",
+          "description": "Yaourt nature crémeux — Option à 500 FCFA",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "des-3b",
+          "nom": "Yaourt nature — option 1 000 FCFA",
+          "description": "Yaourt nature crémeux — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "des-4a",
+          "nom": "Yaourt au raisins — option 500 FCFA",
+          "description": "Yaourt aux raisins secs — Option à 500 FCFA",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "des-4b",
+          "nom": "Yaourt au raisins — option 1 000 FCFA",
+          "description": "Yaourt aux raisins secs — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "des-5a",
+          "nom": "Yaourt Deloria — option 500 FCFA",
+          "description": "Yaourt maison spécial Deloria — Option à 500 FCFA",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "des-5b",
+          "nom": "Yaourt Deloria — option 1 000 FCFA",
+          "description": "Yaourt maison spécial Deloria — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "des-6",
+          "nom": "Assiette de fruits",
+          "description": "Assortiment de fruits frais",
+          "prix": 2000,
+          "disponible": true
+        },
+        {
+          "id": "des-7a",
+          "nom": "Jus nature — option 500 FCFA",
+          "description": "Jus de fruits frais pressé — Option à 500 FCFA",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "des-7b",
+          "nom": "Jus nature — option 1 000 FCFA",
+          "description": "Jus de fruits frais pressé — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "garnitures",
+      "nom": "Garnitures",
+      "icon": "PlusSquare",
+      "plats": [
+        {
+          "id": "gar-1",
+          "nom": "Riz",
+          "description": "Riz blanc nature",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "gar-2",
+          "nom": "Attiéké",
+          "description": "Semoule de manioc fermenté",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "gar-3",
+          "nom": "Attiéké palmiste",
+          "description": "Attiéké au jus de palmiste",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "gar-4",
+          "nom": "Alloco",
+          "description": "Banane plantain frite",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "gar-5",
+          "nom": "Frites de pomme de terre",
+          "description": "Frites croustillantes",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "gar-6a",
+          "nom": "Couscous — option 1 000 FCFA",
+          "description": "Couscous traditionnel — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "gar-6b",
+          "nom": "Couscous — option 1 500 FCFA",
+          "description": "Couscous traditionnel — Option à 1 500 FCFA",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "gar-7",
+          "nom": "Igname araignée",
+          "description": "Igname pilée façon araignée",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "gar-8",
+          "nom": "Igname bouillie / grillée",
+          "description": "Igname au choix",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "gar-9",
+          "nom": "Croquettes d'igname",
+          "description": "Croquettes d'igname moelleuses",
+          "prix": 2000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "sucreries-bieres",
+      "nom": "Sucreries & Bières",
+      "icon": "GlassWater",
+      "plats": [
+        {
+          "id": "boi-1",
+          "nom": "Fanta",
+          "description": "Soda orange",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-2",
+          "nom": "Coca-cola",
+          "description": "Coca-Cola original",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-3",
+          "nom": "Sprite",
+          "description": "Limonade Sprite",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-4",
+          "nom": "Moka café",
+          "description": "Boisson caféinée",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-5",
+          "nom": "Tonic",
+          "description": "Eau tonique",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-6",
+          "nom": "Cody's Energy",
+          "description": "Boisson énergisante",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-7",
+          "nom": "Doppel Energy",
+          "description": "Boisson énergisante",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "boi-8",
+          "nom": "Pressa Nature",
+          "description": "Jus pressé nature",
+          "prix": 2000,
+          "disponible": true
+        },
+        {
+          "id": "boi-9",
+          "nom": "Pressa Nectar",
+          "description": "Nectar de fruits",
+          "prix": 1500,
+          "disponible": true
+        },
+        {
+          "id": "boi-10",
+          "nom": "Ivoiro Ananas / Cocktail",
+          "description": "Cocktail ananas ivoirien",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "boi-11",
+          "nom": "Bière Beaufort",
+          "description": "Bière locale",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "boi-12",
+          "nom": "Bock",
+          "description": "Bière Bock",
+          "prix": 600,
+          "disponible": true
+        },
+        {
+          "id": "boi-13",
+          "nom": "Budweiser",
+          "description": "Bière américaine",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "boi-14",
+          "nom": "Heineken",
+          "description": "Bière hollandaise",
+          "prix": 700,
+          "disponible": true
+        },
+        {
+          "id": "boi-15a",
+          "nom": "Guinness — option 750 FCFA",
+          "description": "Bière stout — Option à 750 FCFA",
+          "prix": 750,
+          "disponible": true
+        },
+        {
+          "id": "boi-15b",
+          "nom": "Guinness — option 1 300 FCFA",
+          "description": "Bière stout — Option à 1 300 FCFA",
+          "prix": 1300,
+          "disponible": true
+        },
+        {
+          "id": "boi-16",
+          "nom": "Doppel",
+          "description": "Bière Doppel",
+          "prix": 700,
+          "disponible": true
+        },
+        {
+          "id": "boi-17",
+          "nom": "Desperado",
+          "description": "Bière tequila",
+          "prix": 600,
+          "disponible": true
+        },
+        {
+          "id": "boi-18",
+          "nom": "Tequila",
+          "description": "Shot de tequila",
+          "prix": 600,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "aperitifs",
+      "nom": "Apéritifs",
+      "icon": "CupSoda",
+      "plats": [
+        {
+          "id": "ape-1",
+          "nom": "Pastis",
+          "description": "Pastis 51, Ricard",
+          "prix": 1000,
+          "disponible": true,
+          "unit": "tournée"
+        },
+        {
+          "id": "ape-2",
+          "nom": "Saint-James",
+          "description": "Rhum ambré",
+          "prix": 1000,
+          "disponible": true,
+          "unit": "tournée"
+        },
+        {
+          "id": "ape-3",
+          "nom": "Mangoustans",
+          "description": "Liqueur de mangoustan",
+          "prix": 1000,
+          "disponible": true,
+          "unit": "tournée"
+        },
+        {
+          "id": "ape-4",
+          "nom": "Bois bandé",
+          "description": "Liqueur traditionnelle",
+          "prix": 500,
+          "disponible": true,
+          "unit": "tournée"
+        }
+      ]
+    },
+    {
+      "id": "tournee-liqueur",
+      "nom": "Tournée de Liqueur",
+      "icon": "Wine",
+      "plats": [
+        {
+          "id": "liq-1",
+          "nom": "Ricard (1 tournée)",
+          "description": "Tournée de liqueur Ricard",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "liq-2",
+          "nom": "Campari (1 tournée)",
+          "description": "Tournée de liqueur Campari",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "liq-3",
+          "nom": "Red Label (1 tournée)",
+          "description": "Tournée de liqueur Red Label",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "liq-4",
+          "nom": "Pastis 51 (1 tournée)",
+          "description": "Tournée de liqueur Pastis 51",
+          "prix": 1000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "eaux-minerales",
+      "nom": "Eaux Minérales",
+      "icon": "Droplets",
+      "plats": [
+        {
+          "id": "eau-1",
+          "nom": "Céleste 1.5L",
+          "description": "Eau minérale Céleste",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "eau-2",
+          "nom": "Olgane 1.5L",
+          "description": "Eau minérale Olgane",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "eau-3",
+          "nom": "Kirène 1.5L",
+          "description": "Eau minérale Kirène",
+          "prix": 500,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "eaux-gazeuses",
+      "nom": "Eaux Gazeuses",
+      "icon": "Sparkles",
+      "plats": [
+        {
+          "id": "eaug-1",
+          "nom": "Perrier",
+          "description": "Eau gazeuse Perrier",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "eaug-2",
+          "nom": "Kirène la pétillante",
+          "description": "Eau gazeuse Kirène",
+          "prix": 2000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "vins",
+      "nom": "Vins",
+      "icon": "GlassWater",
+      "plats": [
+        {
+          "id": "vin-1",
+          "nom": "RLG blanc",
+          "description": "Vin blanc RLG",
+          "prix": 2500,
+          "disponible": true
+        },
+        {
+          "id": "vin-2",
+          "nom": "RLG rouge",
+          "description": "Vin rouge RLG",
+          "prix": 2500,
+          "disponible": true
+        },
+        {
+          "id": "vin-3",
+          "nom": "Don Simon",
+          "description": "Vin espagnol Don Simon",
+          "prix": 3000,
+          "disponible": true
+        },
+        {
+          "id": "vin-4",
+          "nom": "Grand Versant",
+          "description": "Vin Grand Versant",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "vin-5",
+          "nom": "Huit-clos",
+          "description": "Vin Huit-clos",
+          "prix": 4000,
+          "disponible": true
+        },
+        {
+          "id": "vin-6a",
+          "nom": "Valpierre — option 1 000 FCFA",
+          "description": "Vin Valpierre — Option à 1 000 FCFA",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "vin-6b",
+          "nom": "Valpierre — option 2 000 FCFA",
+          "description": "Vin Valpierre — Option à 2 000 FCFA",
+          "prix": 2000,
+          "disponible": true
+        },
+        {
+          "id": "vin-7",
+          "nom": "Artesano",
+          "description": "Vin Artesano",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-8",
+          "nom": "Baron d'Arignac",
+          "description": "Vin Baron d'Arignac",
+          "prix": 6500,
+          "disponible": true
+        },
+        {
+          "id": "vin-9",
+          "nom": "Veuve du Vernay",
+          "description": "Vin Veuve du Vernay",
+          "prix": 6500,
+          "disponible": true
+        },
+        {
+          "id": "vin-10",
+          "nom": "Le Prieuré Lison",
+          "description": "Vin Le Prieuré Lison",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-11",
+          "nom": "Mucho Más",
+          "description": "Vin Mucho Más",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-12",
+          "nom": "Asconi",
+          "description": "Vin Asconi",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-13",
+          "nom": "Veuve Clicquot brut",
+          "description": "Article rayé / non disponible",
+          "prix": 0,
+          "disponible": false
+        },
+        {
+          "id": "vin-14",
+          "nom": "La Réserve Probus",
+          "description": "Vin La Réserve Probus",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-15",
+          "nom": "The guv'nor",
+          "description": "Vin The guv'nor",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-16",
+          "nom": "Montignac",
+          "description": "Vin Montignac",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-17",
+          "nom": "Muscador « Rosé »",
+          "description": "Vin Muscador Rosé",
+          "prix": 5000,
+          "disponible": true
+        },
+        {
+          "id": "vin-18",
+          "nom": "Sand Stone",
+          "description": "Vin Sand Stone",
+          "prix": 4500,
+          "disponible": true
+        },
+        {
+          "id": "vin-19",
+          "nom": "Côtes du Rhône",
+          "description": "Vin Côtes du Rhône",
+          "prix": 7500,
+          "disponible": true
+        },
+        {
+          "id": "vin-20",
+          "nom": "Haussmann",
+          "description": "Article rayé / non disponible",
+          "prix": 0,
+          "disponible": false
+        },
+        {
+          "id": "vin-21",
+          "nom": "Petit Palace",
+          "description": "Vin Petit Palace",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "vin-22",
+          "nom": "Louis Eschenauer « Merlot »",
+          "description": "Vin Louis Eschenauer Merlot",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "vin-23",
+          "nom": "Roche Mazet « Merlot »",
+          "description": "Vin Roche Mazet Merlot",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "vin-24",
+          "nom": "Roche Mazet « Cabernet sauvignon »",
+          "description": "Vin Roche Mazet Cabernet sauvignon",
+          "prix": 6000,
+          "disponible": true
+        },
+        {
+          "id": "vin-25",
+          "nom": "Les Portes de Bordeaux",
+          "description": "Vin Les Portes de Bordeaux",
+          "prix": 15000,
+          "disponible": true
+        },
+        {
+          "id": "vin-26",
+          "nom": "Louis Mercier",
+          "description": "Vin Louis Mercier",
+          "prix": 15000,
+          "disponible": true
+        },
+        {
+          "id": "vin-27",
+          "nom": "La Petite Vendange",
+          "description": "Vin La Petite Vendange",
+          "prix": 3500,
+          "disponible": true
+        },
+        {
+          "id": "vin-28",
+          "nom": "Duchesse Louise",
+          "description": "Vin Duchesse Louise",
+          "prix": 3500,
+          "disponible": true
+        },
+        {
+          "id": "vin-29",
+          "nom": "RLG",
+          "description": "Vin RLG",
+          "prix": 2500,
+          "disponible": true
+        },
+        {
+          "id": "vin-30",
+          "nom": "Château Saint Bernard",
+          "description": "Vin Château Saint Bernard",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "vin-31",
+          "nom": "Moët & Chandon",
+          "description": "Champagne Moët & Chandon",
+          "prix": 40000,
+          "disponible": true
+        },
+        {
+          "id": "vin-32",
+          "nom": "Champagne Vincent",
+          "description": "Champagne Vincent",
+          "prix": 40000,
+          "disponible": true
+        },
+        {
+          "id": "vin-33",
+          "nom": "Laurent Perrier",
+          "description": "Champagne Laurent Perrier",
+          "prix": 40000,
+          "disponible": true
+        },
+        {
+          "id": "vin-34",
+          "nom": "Château Haute de Plaisance",
+          "description": "Vin Château Haute de Plaisance",
+          "prix": 10000,
+          "disponible": true
+        },
+        {
+          "id": "vin-35",
+          "nom": "Veuve Clicquot",
+          "description": "Champagne Veuve Clicquot",
+          "prix": 50000,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "nos-talier",
+      "nom": "Nos Talier (sur commande)",
+      "icon": "CalendarDays",
+      "plats": [
+        {
+          "id": "tal-1",
+          "nom": "Sauce Gouagouassou",
+          "description": "Sauce traditionnelle",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-2",
+          "nom": "Sauce Mankouzoué",
+          "description": "Sauce épicée",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-3",
+          "nom": "Sauce Djoungblé",
+          "description": "Sauce aux aubergines",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-4",
+          "nom": "Sauce Aubergine",
+          "description": "Sauce d'aubergine",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-5",
+          "nom": "Sauce Copé",
+          "description": "Sauce traditionnelle",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-6",
+          "nom": "Sauce Arachide",
+          "description": "Sauce aux arachides",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-7",
+          "nom": "Sauce (feuilles, gombo grillé)",
+          "description": "Sauce aux feuilles et gombo",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-8",
+          "nom": "Sauce Tomate",
+          "description": "Sauce tomate maison",
+          "prix": 0,
+          "disponible": true
+        },
+        {
+          "id": "tal-9",
+          "nom": "Viandes de Brousse",
+          "description": "Viandes de brousse (selon disponibilité)",
+          "prix": 0,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "pressing-laver",
+      "nom": "Pressing — Laver Repasser",
+      "icon": "Shirt",
+      "plats": [
+        {
+          "id": "la-1",
+          "nom": "Pantalon",
+          "description": "Pantalon propre et repassé",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-2",
+          "nom": "Chemise",
+          "description": "Chemise lavée et repassée",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-3",
+          "nom": "Veste",
+          "description": "Veste nettoyée",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "la-4",
+          "nom": "Costume",
+          "description": "Costume complet",
+          "prix": 2000,
+          "disponible": true
+        },
+        {
+          "id": "la-5",
+          "nom": "Boubou",
+          "description": "Boubou traditionnel",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "la-6",
+          "nom": "Tee-Shirt",
+          "description": "Tee-shirt lavé",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-7",
+          "nom": "Culotte",
+          "description": "Culotte nettoyée",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-8",
+          "nom": "Robe",
+          "description": "Robe lavée et repassée",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-9",
+          "nom": "Jupe",
+          "description": "Jupe nettoyée",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-10",
+          "nom": "Drap",
+          "description": "Drap propre",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-11",
+          "nom": "Petite Serviette",
+          "description": "Petite serviette",
+          "prix": 500,
+          "disponible": true
+        },
+        {
+          "id": "la-12",
+          "nom": "Grande Serviette",
+          "description": "Grande serviette",
+          "prix": 1000,
+          "disponible": true
+        },
+        {
+          "id": "la-13",
+          "nom": "Sous Corps",
+          "description": "Sous-vêtement",
+          "prix": 500,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "pressing-repasser",
+      "nom": "Pressing — Repasser Simple",
+      "icon": "Scissors",
+      "plats": [
+        {
+          "id": "re-1",
+          "nom": "Pantalon",
+          "description": "Repassage pantalon",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-2",
+          "nom": "Chemise",
+          "description": "Repassage chemise",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-3",
+          "nom": "Veste",
+          "description": "Repassage veste",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-4",
+          "nom": "Boubou",
+          "description": "Repassage boubou",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-5",
+          "nom": "Tee-Shirt",
+          "description": "Repassage tee-shirt",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-6",
+          "nom": "Culotte",
+          "description": "Repassage culotte",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-7",
+          "nom": "Robe",
+          "description": "Repassage robe",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-8",
+          "nom": "Jupe",
+          "description": "Repassage jupe",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-9",
+          "nom": "Drap",
+          "description": "Repassage drap",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-10",
+          "nom": "Petite Serviette",
+          "description": "Repassage petite serviette",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-11",
+          "nom": "Grande Serviette",
+          "description": "Repassage grande serviette",
+          "prix": 200,
+          "disponible": true
+        },
+        {
+          "id": "re-12",
+          "nom": "Sous-corps",
+          "description": "Repassage sous-vêtement",
+          "prix": 200,
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}

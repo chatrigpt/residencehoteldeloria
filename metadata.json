@@ -1,0 +1,6 @@
+{
+  "name": "Restaurant Deloria",
+  "description": "Menu digital interactif avec espace d'administration sécurisé pour la gestion des plats et des catégories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
